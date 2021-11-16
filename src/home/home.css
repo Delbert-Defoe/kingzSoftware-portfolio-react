@@ -1,0 +1,16 @@
+.banner {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  animation-name: wipe-in;
+  animation-duration: 1000ms;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0.7);
+}
+
+@keyframes wipe-in {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
