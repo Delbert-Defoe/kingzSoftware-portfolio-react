@@ -61,7 +61,7 @@ export default function Home({ changeNavBar }) {
         <div className="mt-16 self-center z-20">
           <Link
             className="hover:text-white text-white transition-all duration-200 font-mono border-accent border-2 hover:bg-accent py-4 px-8 relative mb-16"
-            to="#"
+            to="/projects"
           >
             View Projects
           </Link>

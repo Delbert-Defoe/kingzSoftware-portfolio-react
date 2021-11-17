@@ -89,7 +89,7 @@ export default function About() {
   const paraVisible = useIntersectionObserver(paraRef, options, false);
 
   return (
-    <main className="pt-36 min-h-screen w-full bg-white ">
+    <main className="pt-24 min-h-screen w-full bg-white ">
       <h1
         ref={titleRef}
         className={`pl-5 lg:pl-20 mb-5 text-5xl lg:text-7xl text-black font-sans font-extrabold ${
@@ -104,7 +104,7 @@ export default function About() {
           className="px-5 py-12 lg:px-10 lg:py-24 w-full lg:w-1/2 bg-black"
         >
           <p
-            className={`max-w-prose text-white leading-loose ${
+            className={`max-w-prose font-mono font-light text-white leading-loose ${
               paraVisible ? "animate-fade-up" : "invisible"
             }`}
           >

@@ -50,7 +50,7 @@ module.exports = {
     extend: {
       animations: ["hover"],
       boxShadow: ["dark"],
-      transform: ["hover"],
+      transform: ["hover", "group-hover"],
       display: ["group-hover"],
     },
   },

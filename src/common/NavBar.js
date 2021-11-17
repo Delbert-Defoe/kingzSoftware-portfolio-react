@@ -90,22 +90,21 @@ export default function NavBar() {
           >
             Projects
           </NavLink>
-          <div>
-            <nav className="absolute flex-col hidden lg:group-hover:flex hover:flex -left-5 w-32 bg-white shadow-xl">
-              <Link to="/projects/web-development" className="sub-link">
-                Websites
-              </Link>
-              <Link to="/projects/web-development" className="sub-link">
-                Mobile Apps
-              </Link>
-              <Link to="/projects/web-development" className="sub-link">
-                Flyers
-              </Link>
-              <Link to="/projects/web-development" className="sub-link">
-                Videos
-              </Link>
-            </nav>
-          </div>
+
+          <nav className="absolute flex-col hidden lg:group-hover:flex hover:flex -left-5 w-32 bg-white shadow-xl">
+            <Link to="/projects/web-development" className="sub-link">
+              Websites
+            </Link>
+            <Link to="/projects/app-development" className="sub-link">
+              Mobile Apps
+            </Link>
+            <Link to="/projects/flyers" className="sub-link">
+              Flyers
+            </Link>
+            <Link to="/projects/videos" className="sub-link">
+              Videos
+            </Link>
+          </nav>
         </div>
         <NavLink
           to="/packages"
