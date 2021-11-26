@@ -62,7 +62,7 @@ export default function NavBar() {
         <div>
           <Link
             className="bg-accent text-white py-4 px-4 text-sm hover:opacity-70 transition-opacity duration-200"
-            to="#"
+            to="/contact-us"
           >
             Contact Us
           </Link>

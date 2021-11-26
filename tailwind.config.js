@@ -12,14 +12,17 @@ module.exports = {
     colors: {
       accent2: "#3A3A3A",
       accent: "#c40202",
-      white: "#FFFFFF",
-      black: "#000000",
+      white: "#F1F1F1",
+      black: "#000005",
     },
     screens: {
       special: "380px",
       ...defaultTheme.screens,
     },
     extend: {
+      backgroundImage: {
+        bgimg: "url('img/pexels-cottonbro-5054208.jpg')",
+      },
       animation: {
         "fade-up": "fadeup 500ms cubic-bezier(0,.23,0,.44)",
         "fade-in": "fadein 500ms ease-in",

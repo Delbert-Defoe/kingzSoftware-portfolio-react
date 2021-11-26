@@ -12,6 +12,8 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Projects from "./projects/Projects";
 import Packages from "./packages/Packages";
+import Websites from "./projects/Websites";
+import Contact from "./contact/Contact";
 
 library.add(fas, fab, faArrowDown);
 
@@ -50,6 +52,9 @@ function App() {
         <Route exact path="/">
           <Home changeNavBar={changeNavBar} />
         </Route>
+        <Route path="/contact-us">
+          <Contact />
+        </Route>
         <Route path="/about">
           <About />
         </Route>
@@ -60,7 +65,7 @@ function App() {
           <Packages />
         </Route>
         <Route path="/projects/web-development">
-          <div className="bg-white min-h-screen"></div>
+          <Websites />
         </Route>
         <Route path="/projects/app-development"> </Route>
         <Route path="/projects/flyers"> </Route>

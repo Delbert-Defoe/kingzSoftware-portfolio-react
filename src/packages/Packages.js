@@ -1,28 +1,63 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import appdevpic from "../img/pexels-cottonbro-5054208.jpg";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 export default function Packages() {
   return (
-    <main className="pt-20 min-h-screen bg-white  z-0">
-      <article
-        className={`group relative h-80 flex-col justify-center items-center space-y-10 cursor-pointer z-0`}
-      >
-        <img
-          src={appdevpic}
-          alt="Category"
-          className="absolute object-cover h-full w-full opacity-60 z-10"
-        />
-        <h2 className="max-w-xs font-sans font-extrabold text-center text-3xl z-20">
-          HEY
-        </h2>
-        <Link
-          to="#"
-          className="py-4 px-10 font-mono  text-white bg-accent  lg:bg-opacity-50 group-hover:bg-opacity-100 transition-colors duration-300 ease-out z-20"
-        >
-          View
-        </Link>
-      </article>
+    <main className="grid grid-cols-1 gap-5 lg:grid-cols-2 pt-20 pb-5 px-5 lg:px-20 min-h-screen bg-white">
+      <Package />
+      <Package />
     </main>
+  );
+}
+
+function Package() {
+  const targetRef = useRef(null);
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  };
+
+  const isVisible = useIntersectionObserver(targetRef, options, false);
+
+  return (
+    <section
+      ref={targetRef}
+      className={` border-4 border-black border-solid ${
+        isVisible ? "animate-fade-up" : "invisible"
+      } `}
+    >
+      <div className="">
+        <div className="mb-5 p-5 ">
+          <h1 className="mb-5 font-sans font-extrabold text-4xl text-black">
+            Package
+          </h1>
+          <p className="mb-5 max-w-prose font-mono  text-black">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            excepturi deleniti consequatur perspiciatis explicabo vel quas,
+          </p>
+          <ul className="font-mono text-black list-disc list-inside">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+          </ul>
+        </div>
+        <figure
+          className={`group relative h-80 w-full text-white font-sans cursor-pointer bg-bgimg bg-cover bg-center`}
+        >
+          <div className="absolute -bottom-0 -right-0  px-5 py-2 bg-accent">
+            <h2 className="font-extrabold text-center z-30 text-xl">
+              Starting from:
+            </h2>
+            <h3 className="font-extrabold text-center z-30 text-3xl lg:text-4xl">
+              $1000ec
+            </h3>
+          </div>
+        </figure>
+      </div>
+    </section>
   );
 }
